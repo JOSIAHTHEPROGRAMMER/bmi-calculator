@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bmibg"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context=".MainActivity">
+
+    <!-- Cream box container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="20dp">
+
+        <!-- Card for Weight & Height inputs -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+            android:layout_marginTop="340dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+
+                android:padding="16dp">
+
+                <!-- Weight -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_marginEnd="20dp">
+
+                    <TextView
+                        android:id="@+id/weighText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/weight"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:layout_marginBottom="4dp"/>
+
+                    <EditText
+                        android:id="@+id/weightEdit"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:inputType="numberDecimal"
+                        android:textAlignment="center"
+                        android:textColor="@color/navy"
+                        android:textSize="18sp"
+                        android:hint="@string/kg"/>
+                </LinearLayout>
+
+                <!-- Height -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/heightText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/height"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:layout_marginBottom="4dp"/>
+
+                    <EditText
+                        android:id="@+id/heightEdit"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:inputType="numberDecimal"
+                        android:textAlignment="center"
+                        android:textColor="@color/navy"
+                        android:textSize="18sp"
+                        android:hint="@string/cm"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Button -->
+        <Button
+            android:id="@+id/calculationBtn"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/calculate_bmi"
+            android:textSize="16sp"
+            android:backgroundTint="@color/navy"
+            android:textColor="@color/white"/>
+
+        <!-- Result -->
+        <TextView
+            android:id="@+id/resultText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/result"
+            android:textColor="@color/navy"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp"/>
+    </LinearLayout>
+</LinearLayout>

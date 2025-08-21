@@ -1,0 +1,29 @@
+# Gradle files
+.gradle/
+build/
+*/build/
+
+# Local configuration
+local.properties
+
+# IDE files
+.idea/
+*.iml
+
+# Logs
+*.log
+
+# OS-specific junk
+.DS_Store
+Thumbs.db
+
+# NDK / C++ stuff
+.cxx/
+.externalNativeBuild/
+
+# Captures
+captures/
+
+# Keystore files (keep your signing keys private!)
+*.jks
+*.keystore
